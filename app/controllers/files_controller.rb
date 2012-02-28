@@ -95,10 +95,12 @@ class FilesController < ApplicationController
         @content_for_sidebar = 'index_sidebar'
         @pagination = []
 
-        @folder = @file.project_folder
+        # project_folder changed to just folder
+        # @folder = @file.project_folder
+        @folder = @file.folder
         @last_revision = @revisions[0]
 
-        @current_folder = @file.project_folder
+        # @current_folder = @file.project_folder
         @order = nil
         @page = nil
         @folders = @active_project.folders
